@@ -12,13 +12,13 @@ namespace SalesWebMvc.Controllers
     {
         private readonly SellerService _sellerService;
 
-        public SellersController (SellerService sellerService)
+        public SellersController(SellerService sellerService)
         {
             _sellerService = sellerService;
         }
         public IActionResult Index()
         {
-            var list = _sellerService.Findall();
+            var list = _sellerService.FindAll();
             return View(list);
         }
         public IActionResult Create()
